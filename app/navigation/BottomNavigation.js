@@ -1,6 +1,12 @@
 import React from "react";
 import { StyleSheet, View, TouchableOpacity } from "react-native";
-import { AntDesign, Fontisto, Octicons } from "@expo/vector-icons";
+import {
+  AntDesign,
+  Fontisto,
+  Octicons,
+  Ionicons,
+  Entypo,
+} from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const BottomNavigation = () => {
@@ -33,7 +39,7 @@ const BottomNavigation = () => {
           isActiveScreen("Cards") ? styles.activeIconContainer : null,
         ]}
       >
-        <AntDesign name="search1" size={24} color="black" />
+        <Ionicons name="card" size={24} color="black" />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigateToScreen("Transactions")}
@@ -42,7 +48,7 @@ const BottomNavigation = () => {
           isActiveScreen("Transactions") ? styles.activeIconContainer : null,
         ]}
       >
-        <Fontisto name="bell" size={24} color="black" />
+        <Entypo name="circular-graph" size={24} color="black" />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigateToScreen("Settings")}
@@ -51,7 +57,12 @@ const BottomNavigation = () => {
           isActiveScreen("Settings") ? styles.activeIconContainer : null,
         ]}
       >
-        <AntDesign name="user" size={24} color="black" />
+        <Ionicons
+          name="ios-settings-sharp"
+          size={24}
+          color="black"
+          
+        />
       </TouchableOpacity>
     </View>
   );
@@ -74,6 +85,7 @@ const styles = StyleSheet.create({
   activeIconContainer: {
     backgroundColor: "blue",
   },
+  
 });
 
 export default BottomNavigation;

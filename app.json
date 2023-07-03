@@ -2,8 +2,13 @@
   "expo": {
     "scheme": "acme",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "androidStatusBar": {
+        "backgroundColor": "#242424",
+        "translucent": false
+      }
     },
+
     "name": "Payday",
     "slug": "Payday"
   }
