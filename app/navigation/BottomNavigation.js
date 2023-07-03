@@ -1,11 +1,10 @@
 import React from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import {
-  AntDesign,
-  Fontisto,
   Octicons,
   Ionicons,
   Entypo,
+  Foundation
 } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
@@ -30,7 +29,8 @@ const BottomNavigation = () => {
           isActiveScreen("Home") ? styles.activeIconContainer : null,
         ]}
       >
-        <Octicons name="home" size={24} color="black" />
+        <Foundation name="home" size={24} color="black" />
+        <Text style={styles.text}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigateToScreen("Cards")}
@@ -40,6 +40,7 @@ const BottomNavigation = () => {
         ]}
       >
         <Ionicons name="card" size={24} color="black" />
+        <Text style={styles.text}>Cards</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigateToScreen("Transactions")}
@@ -49,6 +50,7 @@ const BottomNavigation = () => {
         ]}
       >
         <Entypo name="circular-graph" size={24} color="black" />
+        <Text style={styles.text}>Transactions</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigateToScreen("Settings")}
@@ -57,12 +59,9 @@ const BottomNavigation = () => {
           isActiveScreen("Settings") ? styles.activeIconContainer : null,
         ]}
       >
-        <Ionicons
-          name="ios-settings-sharp"
-          size={24}
-          color="black"
-          
-        />
+        <Ionicons name="ios-settings-sharp" size={24} color="black" />
+
+        <Text style={styles.text}>Settings</Text>
       </TouchableOpacity>
     </View>
   );
@@ -72,8 +71,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "center",
-    height: 60,
+    paddingTop: 25,
+    height: 100,
     borderColor: "#ccc",
     backgroundColor: "transparent",
   },
@@ -85,7 +84,11 @@ const styles = StyleSheet.create({
   activeIconContainer: {
     backgroundColor: "blue",
   },
-  
+  text:{
+    fontSize:10,
+  paddingVertical:5,
+  color:'#000'
+  }
 });
 
 export default BottomNavigation;

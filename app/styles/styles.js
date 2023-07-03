@@ -7,10 +7,9 @@ export const styles = StyleSheet.create({
   header: {
     backgroundColor: "#242424",
     paddingHorizontal: 20,
-    height: 350,
     width: "100%",
-    position:'relative'
   },
+
   userHeader: {
     paddingTop: 50,
     flexDirection: "row",
@@ -60,7 +59,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 12,
     borderRadius: 30,
-    gap: 5
+    gap: 5,
   },
   currencyText: {
     fontSize: 16,
@@ -82,11 +81,16 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#fff",
   },
+  userHead: {
+    backgroundColor: "#242424",
+    height: 257,
+    position: "relative",
+  },
   balance: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginHorizontal: 2,
+    marginHorizontal: 10,
     paddingVertical: 20,
     borderBottomWidth: 1,
     borderBottomColor: "#403d39",
@@ -112,6 +116,7 @@ export const styles = StyleSheet.create({
   headerOptions: {
     flexDirection: "row",
     justifyContent: "space-around",
+    marginHorizontal: 35,
   },
   options: {
     flexDirection: "row",
@@ -128,8 +133,106 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   optionText: {
-    fontWeight: 500,
+    fontWeight: 400,
     color: "#fff",
     padding: 10,
+    fontSize: 13,
   },
+  userAction: {
+    alignItems: "flex-start",
+    justifyContent: "space-around",
+    height: 175,
+    position: "absolute",
+    top: 167,
+    width: "90%",
+    marginHorizontal: 20,
+    paddingHorizontal: 10,
+    borderRadius: 20,
+    backgroundColor: "#fff",
+  },
+  actionIcon: {
+    height: 35,
+    width: 35,
+    borderRadius: 100,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#E4E4E4",
+  },
+  action: {
+    justifyContent: "space-around",
+    flexDirection: "row",
+    gap: 10,
+  },
+  userActionText: {
+    lineHeight: 5,
+    padding: 2,
+  },
+  actionTextTitle: {
+    fontWeight: 500,
+  },
+
+  actionText: {
+    fontSize: 14,
+    color: "#bfbfbf",
+  },
+  userHero: {
+    position: "absolute",
+    top: 340,
+    alignSelf: "flex-start",
+  },
+  userHeroText: {
+    fontWeight: 400,
+    fontSize: 14,
+    paddingVertical: 15,
+    marginHorizontal: 20,
+  },
+  heroContainer: {
+    flex: 1,
+    justifyContent: "space-around",
+    flexDirection: "row",
+    alignItem: "center",
+    paddingHorizontal: 10,
+    marginHorizontal: 20,
+    height: 105,
+    backgroundColor: "#000",
+    borderRadius: 20,
+    width: "87%",
+  },
+  heroText: {
+    color: "#fff",
+    maxWidth: 150,
+    paddingVertical: 25,
+  },
+  heroImg: {
+    height: 110,
+    width: 110,
+    aspectRatio: 1,
+  },
+  userTransaction: {
+    marginTop: 250,
+    marginHorizontal: 20,
+    marginBottom: 40,
+    flex: 1,
+  },
+  transOption: {
+    marginTop: 20,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    paddingBottom: 25,
+  },
+  userTransact: {
+    backgroundColor: "#fff",
+    borderRadius: 20,
+    paddingHorizontal: 20,
+  },
+  transOptionTexta: {
+    fontSize: 14,
+    color: "#000",
+  },
+  transOptionTextb: {
+    fontSize: 11,
+    color: "gray",
+  },
+  
+  
 });
