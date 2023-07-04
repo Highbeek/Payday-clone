@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import { blackCard, purpleCard, greenCard } from "../assets/images/index"
 const naira = "\u20A6";
 const dollar = "\u0024";
 
@@ -81,5 +82,32 @@ export const currencies = [
   },
 ];
 
-
-
+export const cards = [
+  {
+    uid: 1,
+    img: blackCard,
+    cardType: "Payday Mastercard",
+    cardText: "Suitable for all shopping and subscription services",
+    amount: "$5.00",
+    transFee: "None",
+    secure: "No",
+  },
+  {
+    uid: 2,
+    img: purpleCard,
+    cardType: "Payday  Visa Card",
+    cardText: "Visa card for even more versatile transactions",
+    amount: "$5.00",
+    transFee: "None",
+    secure: "No",
+  },
+  {
+    uid: 3,
+    img: greenCard,
+    cardType: "Payday Verve Card",
+    cardText: "Suitable for all shopping and subscription services",
+    amount: "Free",
+    transFee: "None",
+    secure: "Verve Safe Token",
+  },
+];

@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  // home styles
   container: {
     flex: 1,
   },
@@ -233,6 +234,136 @@ export const styles = StyleSheet.create({
     fontSize: 11,
     color: "gray",
   },
-  
-  
+
+  //   Card Styles
+
+  cardContainer: {
+    flex: 1,
+    marginTop: 50,
+  },
+  cardHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginLeft: "40%",
+    marginTop: 10,
+    marginHorizontal: 20,
+  },
+  cardHeaderText: {
+    fontSize: 18,
+    fontWeight: 400,
+  },
+  cardHeaderIcon: {
+    height: 20,
+    width: 20,
+    borderRadius: 100,
+    backgroundColor: "#000",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  scrollViewContent: {
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  rowContainer: {
+    flexDirection: "row",
+    marginLeft: 40,
+    marginRight: 40,
+    marginVertical: 20,
+  },
+  cardImgContainer: {
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  cardImgScrollView: {
+    flexDirection: "row",
+  },
+  cardImg: {
+    width: 280,
+    height: 180,
+    borderRadius: 10,
+  },
+  cardType: {
+    marginTop: 30,
+    paddingBottom: 15,
+    fontWeight: 400,
+    fontSize: 16,
+  },
+  cardText: {
+    fontSize: 14,
+    opacity: 0.5,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "60%",
+    textAlign: "center",
+  },
+  cardDetails: {
+    backgroundColor: "#fff",
+    height: 200,
+    width: "100%",
+    borderRadius: 20,
+    marginTop: 20,
+    justifyContent: "space-around",
+    paddingHorizontal: 20,
+  },
+  cardDetailsText: {
+    fontSize: 14,
+  },
+  cardIcon: {
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#eee",
+  },
+  carddol: {
+    width: 15,
+    height: 15,
+    borderRadius: 100,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#ccc",
+  },
+  cardDetailsInput: {
+    fontSize: 14,
+  },
+  carddet: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: 10,
+  },
+
+  cardDetailsText: {
+    color: "gray",
+    fontSize: 14,
+  },
+  detailsa: {
+    backgroundColor: "#29bf12",
+    width: 40,
+    height: 20,
+    borderRadius: 100,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cardDetailsInputa: {
+    color: "#fff",
+    fontSize: 12,
+  },
+  detailsText: {
+    gap: 5,
+  },
+  cardBtn: {
+    backgroundColor: "#000",
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: 20,
+    width: "100%",
+    paddingVertical:20,
+    borderRadius: 15,
+  },
+  cardBtnText: {
+    color: "#fff",
+  },
 });

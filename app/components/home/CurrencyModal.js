@@ -7,9 +7,14 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
-import { currencies } from "../../assets/doc/";
+import { currencies } from "../../constants/doc";
 
-const CurrencyModal = ({ isVisible, onSelectCurrency, onCloseModal }) => {
+const CurrencyModal = ({
+  isVisible,
+  selectedCurrency,
+  onSelectCurrency,
+  onCloseModal,
+}) => {
   const handleCurrencySelect = (currency) => {
     onSelectCurrency(currency);
     onCloseModal();
@@ -27,9 +32,14 @@ const CurrencyModal = ({ isVisible, onSelectCurrency, onCloseModal }) => {
               onPress={() => handleCurrencySelect(currency)}
             >
               <Image source={{ uri: currency.flag }} style={styles.flag} />
-              <View>
+              <View style={styles.currencyDetails}>
                 <Text style={styles.currencyText}>{currency.currency}</Text>
                 <Text>{currency.balance} </Text>
+              </View>
+              <View style={styles.checkboxContainer}>
+                {currency === selectedCurrency && (
+                  <View style={styles.checkbox} />
+                )}
               </View>
             </TouchableOpacity>
           ))}
@@ -66,14 +76,35 @@ const styles = StyleSheet.create({
   currencyOption: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
     marginBottom: 10,
+  },
+  checkboxContainer: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: "green",
+    marginLeft: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  checkbox: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: "green",
   },
   flag: {
     width: 30,
     height: 30,
-    borderRadius:100,
+    borderRadius: 100,
     marginRight: 10,
-
+  },
+  currencyDetails: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
   },
   currencyText: {
     fontSize: 16,

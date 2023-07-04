@@ -17,10 +17,10 @@ import {
 } from "@expo/vector-icons";
 import { styles } from "../styles/styles";
 import { useNavigation } from "@react-navigation/native";
-import images from "../assets/images/index";
+import { balloon } from "../assets/images/index";
 import { TransactionList } from "../components/home/TransactionList";
 import CurrencyModal from "../components/home/CurrencyModal";
-import { currencies } from "../assets/doc"; 
+import { currencies } from "../constants/doc";
 export default function Home() {
   const [isCurrencyModalVisible, setIsCurrencyModalVisible] = useState(false);
   const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
@@ -143,7 +143,7 @@ export default function Home() {
               <Text style={styles.heroText} numberOfLines={3}>
                 Earn $3 every time you invite a friend (T&amp;C's apply)
               </Text>
-              <Image source={images.balloon} style={styles.heroImg} />
+              <Image source={balloon} style={styles.heroImg} />
             </View>
           </View>
           <View style={styles.userTransaction}>

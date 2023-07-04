@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, Text, FlatList, StyleSheet } from "react-native";
-import { transactions } from "../../assets/doc";
+import { transactions } from "../../constants/doc";
 import { Ionicons } from "@expo/vector-icons";
 
 export const TransactionList = () => {
