@@ -360,10 +360,51 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     marginVertical: 20,
     width: "100%",
-    paddingVertical:20,
+    paddingVertical: 20,
     borderRadius: 15,
   },
   cardBtnText: {
     color: "#fff",
   },
+
+  // Settings
+  settingsContainer: {
+    marginTop: 50,
+    alignItems: "center",
+  },
+  
+  usernameContainer: {
+    alignItems: "center",
+    marginVertical: 20,
+    gap:5
+  },
+  settingsUser: {
+    marginTop: 30,
+  },
+  sUsername: {},
+  username: {},
+  settingsBtn: {
+    backgroundColor: "green",
+    borderRadius: 20,
+  },
+  sBtnText: {
+    color: "#fff",
+    paddingHorizontal: 10,
+    paddingVertical: 12,
+    fontSize: 12,
+  },
+  settingsCard: {
+    marginVertical: 30,
+    width: "90%",
+    marginHorizontal: 40,
+  },
+  versionC:{
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  vText:{
+    opacity:.5,
+    fontSize:14,
+    marginBottom:55
+  }
 });

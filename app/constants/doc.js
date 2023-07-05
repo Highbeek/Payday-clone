@@ -1,5 +1,11 @@
-import { Ionicons } from "@expo/vector-icons";
-import { blackCard, purpleCard, greenCard } from "../assets/images/index"
+import {
+  Ionicons,
+  FontAwesome,
+  MaterialCommunityIcons,
+  FontAwesome5,
+  MaterialIcons,
+} from "@expo/vector-icons";
+import { blackCard, purpleCard, greenCard } from "../assets/images/index";
 const naira = "\u20A6";
 const dollar = "\u0024";
 
@@ -109,5 +115,52 @@ export const cards = [
     amount: "Free",
     transFee: "None",
     secure: "Verve Safe Token",
+  },
+];
+
+export const settingsCard = [
+  {
+    uid: 1,
+    icon: <FontAwesome name="gift" size={18} color="black" />,
+    action: "Refer & Earn",
+    text: "Invite your friends and get a bonus",
+  },
+  {
+    uid: 2,
+    icon: <MaterialCommunityIcons name="headset" size={18} color="black" />,
+    action: "Help Center",
+    text: "Have an issue? Speak to our team",
+  },
+  {
+    uid: 3,
+    icon: <FontAwesome5 name="coins" size={18} color="black" />,
+    action: "Rate & Fees",
+    text: "See Exhange Rate and Fees",
+  },
+  {
+    uid: 4,
+    icon: <MaterialIcons name="block-flipped" size={18} color="black" />,
+    action: "Limits",
+    text: "See your transaction limits",
+  },
+  {
+    uid: 5,
+    icon: (
+      <MaterialCommunityIcons name="star-four-points" size={18} color="black" />
+    ),
+    action: "Beneficiaries",
+    text: "",
+  },
+  {
+    uid: 6,
+    icon: <Ionicons name="key-outline" size={16} color="black" />,
+    action: "Account Security",
+    text: "",
+  },
+  {
+    uid: 7,
+    icon: <MaterialIcons name="logout" size={18} color="black" />,
+    action: "Logout",
+    text: "",
   },
 ];
