@@ -8,14 +8,12 @@ import { cards } from "../constants/doc";
 export default function Cards() {
   const [selectedCard, setSelectedCard] = useState(cards[0]);
 
- const handleCardScroll = (event) => {
-   const contentOffsetX = event.nativeEvent.contentOffset.x;
-   const cardIndex = Math.round(contentOffsetX / styles.cardImg.width);
-   const selectedCard = cards[cardIndex] || {};
-   setSelectedCard(selectedCard);
- };
-
-
+  const handleCardScroll = (event) => {
+    const contentOffsetX = event.nativeEvent.contentOffset.x;
+    const cardIndex = Math.round(contentOffsetX / styles.cardImg.width);
+    const selectedCard = cards[cardIndex] || {};
+    setSelectedCard(selectedCard);
+  };
 
   return (
     <View style={styles.cardContainer}>
@@ -36,15 +34,9 @@ export default function Cards() {
         >
           <View style={styles.rowContainer}>
             {cards.map(({ uid, img }) => (
-              <TouchableOpacity
-                key={uid}
-                style={styles.cardImgContainer}
-                onPress={() =>
-                  setSelectedCard(cards.find((card) => card.uid === uid))
-                }
-              >
+              <View key={uid} style={styles.cardImgContainer}>
                 <Image source={img} style={styles.cardImg} />
-              </TouchableOpacity>
+              </View>
             ))}
           </View>
         </ScrollView>

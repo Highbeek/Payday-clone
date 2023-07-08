@@ -23,37 +23,43 @@ export const transactions = [
     recipient: "MTN +2348012345678",
     time: "09:30 AM",
     amount: -1000.0,
-    formattedAmount: `-${naira}${Math.abs(1000).toFixed(2)}`,
+    formattedAmount: `${naira}${Math.abs(1000).toFixed(2)}`,
+    date: "May 04, 2023",
   },
   {
     img: "https://www.famouspeople.com.ng/wp-content/uploads/2022/08/Glo-logo-2.jpg",
     recipient: "GLO",
     time: "02:45 PM",
     amount: 10.75,
-    formattedAmount: `-${naira}${Math.abs(5000).toFixed(2)}`,
+    formattedAmount: `${naira}${Math.abs(10.75).toFixed(2)}`,
+    date: "May 03, 2023",
   },
   {
     img: cardIcon,
     recipient: "to Virtual Card",
     time: "06:15 PM",
     amount: 3.2,
-    formattedAmount: `+${dollar}${Math.abs(3.2).toFixed(2)}`,
+    formattedAmount: `${dollar}${Math.abs(3.2).toFixed(2)}`,
+    date: "May 02, 2023",
   },
   {
     img: cardIcon,
     recipient: "from Virtual Card",
     time: "10:00 AM",
     amount: 2.0,
-    formattedAmount: `+${dollar}${Math.abs(2.0).toFixed(2)}`,
+    formattedAmount: `${dollar}${Math.abs(2.0).toFixed(2)}`,
+    date: "May 02, 2023",
   },
   {
     img: cardIcon,
     recipient: "to Virtual Card",
     time: "03:20 PM",
     amount: 30.8,
-    formattedAmount: `+${dollar}${Math.abs(30.5).toFixed(2)}`,
+    formattedAmount: `${dollar}${Math.abs(30.8).toFixed(2)}`,
+    date: "May 02, 2023",
   },
 ];
+
 
 export const currencies = [
   {
@@ -61,12 +67,14 @@ export const currencies = [
     flag: "https://cdn.britannica.com/68/5068-004-72A3F250/Flag-Nigeria.jpg",
     currency: "NG Naira",
     balance: "₦500.00",
+   
   },
   {
     country: "European Union",
     flag: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
     currency: "Euro",
     balance: "€0.00",
+    
   },
   {
     country: "United Kingdom",

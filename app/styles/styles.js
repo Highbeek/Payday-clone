@@ -234,6 +234,8 @@ export const styles = StyleSheet.create({
     fontSize: 11,
     color: "gray",
   },
+  //transactioncard
+  
 
   //   Card Styles
 
@@ -246,7 +248,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginLeft: "40%",
-    marginVertical:15,
+    marginVertical: 15,
     marginHorizontal: 20,
   },
   cardHeaderText: {
@@ -285,7 +287,7 @@ export const styles = StyleSheet.create({
     marginRight: 20,
   },
   cardCard: {
-    marginTop:20,
+    marginTop: 20,
     marginHorizontal: 20,
   },
   cardType: {
@@ -298,8 +300,8 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     opacity: 0.5,
     textAlign: "center",
-    paddingHorizontal:20,
-    marginHorizontal:40
+    paddingHorizontal: 20,
+    marginHorizontal: 40,
   },
   cardDetails: {
     backgroundColor: "#fff",
@@ -413,4 +415,19 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 55,
   },
+  //Transactions
+  transContainer: {
+    marginTop: 50,
+  },
+  transHeaderIcon: {},
+  transCards: {},
+  transCard: {
+    backgroundColor: "#fff",
+    marginVertical: 10,
+    height: 150,
+    marginHorizontal: 20,
+    borderRadius: 20,
+  },
+  
+  transaction: {},
 });
