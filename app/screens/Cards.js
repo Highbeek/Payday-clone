@@ -8,13 +8,14 @@ import { cards } from "../constants/doc";
 export default function Cards() {
   const [selectedCard, setSelectedCard] = useState(cards[0]);
 
-  const handleCardScroll = (event) => {
-    const contentOffsetX = event.nativeEvent.contentOffset.x;
-    const cardIndex = Math.round(
-      contentOffsetX / styles.cardImgContainer.width
-    );
-    setSelectedCard(cards[cardIndex]);
-  };
+ const handleCardScroll = (event) => {
+   const contentOffsetX = event.nativeEvent.contentOffset.x;
+   const cardIndex = Math.round(contentOffsetX / styles.cardImg.width);
+   const selectedCard = cards[cardIndex] || {};
+   setSelectedCard(selectedCard);
+ };
+
+
 
   return (
     <View style={styles.cardContainer}>
@@ -31,21 +32,27 @@ export default function Cards() {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           scrollEventThrottle={16}
+          onScroll={handleCardScroll}
         >
           <View style={styles.rowContainer}>
             {cards.map(({ uid, img }) => (
-              <View key={uid} style={styles.cardImgContainer}>
+              <TouchableOpacity
+                key={uid}
+                style={styles.cardImgContainer}
+                onPress={() =>
+                  setSelectedCard(cards.find((card) => card.uid === uid))
+                }
+              >
                 <Image source={img} style={styles.cardImg} />
-              </View>
+              </TouchableOpacity>
             ))}
           </View>
         </ScrollView>
 
         <View style={styles.cardCard}>
-          <Text style={styles.cardType}>Payday Mastercard</Text>
-          <Text style={styles.cardText}>
-            Suitable for all shopping and subscription services
-          </Text>
+          <Text style={styles.cardType}>{selectedCard.cardType}</Text>
+          <Text style={styles.cardText}>{selectedCard.cardText}</Text>
+
           <View style={styles.cardDetails}>
             <View style={styles.carddet}>
               <View style={styles.cardIcon}>
@@ -69,7 +76,7 @@ export default function Cards() {
               <View style={styles.detailsText}>
                 <Text style={styles.cardDetailsText}>Transaction fees</Text>
                 <Text style={styles.cardDetailsInput}>
-                  {selectedCard.transFee}{" "}
+                  {selectedCard.transFee}
                 </Text>
               </View>
             </View>
@@ -80,7 +87,7 @@ export default function Cards() {
               <View style={styles.detailsText}>
                 <Text style={styles.cardDetailsText}>3D Secure</Text>
                 <Text style={styles.cardDetailsInput}>
-                  {selectedCard.secure}{" "}
+                  {selectedCard.secure}
                 </Text>
               </View>
             </View>
