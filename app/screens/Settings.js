@@ -22,9 +22,9 @@ export default function Settings() {
         <View style={styles.usernameContainer}>
           <Text style={styles.sUsername}>Ibukun Agboola</Text>
           <Text style={styles.username}>@highbeek</Text>
-        </View>
+        </View> 
         <TouchableOpacity style={styles.settingsBtn}>
-          <Text style={styles.sBtnText}>Edit Button</Text>
+          <Text style={styles.sBtnText}>Edit Profile</Text>
         </TouchableOpacity>
         <View style={styles.settingsCard}>
           <SettingsCard />

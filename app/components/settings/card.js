@@ -7,7 +7,7 @@ export default function SettingsCard() {
   return (
     <View style={styles.container}>
       {settingsCard.map(({ uid, icon, action, text }) => (
-        <View key={uid} style={styles.cover}>
+        <Pressable key={uid} style={styles.cover}>
           <View style={styles.cardIcon}>{icon}</View>
           <View style={styles.cardText}>
             <Text style={styles.cardTexta}>{action}</Text>
@@ -16,7 +16,7 @@ export default function SettingsCard() {
           <Pressable style={styles.icon}>
             <AntDesign name="right" size={15} color="black" />
           </Pressable>
-        </View>
+        </Pressable>
       ))}
     </View>
   );
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 10,
     marginVertical:10,
+    
   },
   cardIcon: {
     height: 35,

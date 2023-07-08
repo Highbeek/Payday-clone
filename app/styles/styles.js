@@ -238,7 +238,7 @@ export const styles = StyleSheet.create({
   //   Card Styles
 
   cardContainer: {
-    flex: 1,
+    // flex: 1,
     marginTop: 50,
   },
   cardHeader: {
@@ -246,7 +246,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginLeft: "40%",
-    marginTop: 10,
+    marginVertical:15,
     marginHorizontal: 20,
   },
   cardHeaderText: {
@@ -269,7 +269,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft: 40,
     marginRight: 40,
-    marginVertical: 20,
+    marginVertical: 10,
   },
   cardImgContainer: {
     flexDirection: "column",
@@ -282,20 +282,24 @@ export const styles = StyleSheet.create({
     width: 280,
     height: 180,
     borderRadius: 10,
+    marginRight: 20,
+  },
+  cardCard: {
+    marginTop:20,
+    marginHorizontal: 20,
   },
   cardType: {
-    marginTop: 30,
     paddingBottom: 15,
     fontWeight: 400,
     fontSize: 16,
+    textAlign: "center",
   },
   cardText: {
     fontSize: 14,
     opacity: 0.5,
-    alignItems: "center",
-    justifyContent: "center",
-    width: "60%",
     textAlign: "center",
+    paddingHorizontal:20,
+    marginHorizontal:40
   },
   cardDetails: {
     backgroundColor: "#fff",
@@ -358,13 +362,15 @@ export const styles = StyleSheet.create({
     backgroundColor: "#000",
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: 20,
-    width: "100%",
+    marginVertical: 30,
+    width: "90%",
     paddingVertical: 20,
     borderRadius: 15,
+    marginHorizontal: 20,
   },
   cardBtnText: {
     color: "#fff",
+    fontWeight: 500,
   },
 
   // Settings
@@ -372,11 +378,11 @@ export const styles = StyleSheet.create({
     marginTop: 50,
     alignItems: "center",
   },
-  
+
   usernameContainer: {
     alignItems: "center",
     marginVertical: 20,
-    gap:5
+    gap: 5,
   },
   settingsUser: {
     marginTop: 30,
@@ -398,13 +404,13 @@ export const styles = StyleSheet.create({
     width: "90%",
     marginHorizontal: 40,
   },
-  versionC:{
-    alignItems:'center',
-    justifyContent:'center'
+  versionC: {
+    alignItems: "center",
+    justifyContent: "center",
   },
-  vText:{
-    opacity:.5,
-    fontSize:14,
-    marginBottom:55
-  }
+  vText: {
+    opacity: 0.5,
+    fontSize: 14,
+    marginBottom: 55,
+  },
 });
